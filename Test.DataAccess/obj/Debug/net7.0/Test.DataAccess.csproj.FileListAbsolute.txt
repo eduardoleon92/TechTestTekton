@@ -1,0 +1,17 @@
+C:\Users\eleon\OneDrive\Escritorio\WebDEMO\BackEnd\Test.DataAccess\bin\Debug\net7.0\Test.DataAccess.deps.json
+C:\Users\eleon\OneDrive\Escritorio\WebDEMO\BackEnd\Test.DataAccess\bin\Debug\net7.0\Test.DataAccess.dll
+C:\Users\eleon\OneDrive\Escritorio\WebDEMO\BackEnd\Test.DataAccess\bin\Debug\net7.0\Test.DataAccess.pdb
+C:\Users\eleon\OneDrive\Escritorio\WebDEMO\BackEnd\Test.DataAccess\bin\Debug\net7.0\Test.Core.dll
+C:\Users\eleon\OneDrive\Escritorio\WebDEMO\BackEnd\Test.DataAccess\bin\Debug\net7.0\Test.Shared.dll
+C:\Users\eleon\OneDrive\Escritorio\WebDEMO\BackEnd\Test.DataAccess\bin\Debug\net7.0\Test.Core.pdb
+C:\Users\eleon\OneDrive\Escritorio\WebDEMO\BackEnd\Test.DataAccess\bin\Debug\net7.0\Test.Shared.pdb
+C:\Users\eleon\OneDrive\Escritorio\WebDEMO\BackEnd\Test.DataAccess\obj\Debug\net7.0\Test.DataAccess.csproj.AssemblyReference.cache
+C:\Users\eleon\OneDrive\Escritorio\WebDEMO\BackEnd\Test.DataAccess\obj\Debug\net7.0\Test.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eleon\OneDrive\Escritorio\WebDEMO\BackEnd\Test.DataAccess\obj\Debug\net7.0\Test.DataAccess.AssemblyInfoInputs.cache
+C:\Users\eleon\OneDrive\Escritorio\WebDEMO\BackEnd\Test.DataAccess\obj\Debug\net7.0\Test.DataAccess.AssemblyInfo.cs
+C:\Users\eleon\OneDrive\Escritorio\WebDEMO\BackEnd\Test.DataAccess\obj\Debug\net7.0\Test.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\eleon\OneDrive\Escritorio\WebDEMO\BackEnd\Test.DataAccess\obj\Debug\net7.0\Test.DataAccess.csproj.CopyComplete
+C:\Users\eleon\OneDrive\Escritorio\WebDEMO\BackEnd\Test.DataAccess\obj\Debug\net7.0\Test.DataAccess.dll
+C:\Users\eleon\OneDrive\Escritorio\WebDEMO\BackEnd\Test.DataAccess\obj\Debug\net7.0\refint\Test.DataAccess.dll
+C:\Users\eleon\OneDrive\Escritorio\WebDEMO\BackEnd\Test.DataAccess\obj\Debug\net7.0\Test.DataAccess.pdb
+C:\Users\eleon\OneDrive\Escritorio\WebDEMO\BackEnd\Test.DataAccess\obj\Debug\net7.0\ref\Test.DataAccess.dll
