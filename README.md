@@ -11,7 +11,7 @@ Asegúrate de tener instalados los siguientes requisitos previos antes de contin
 ## Clonar el Repositorio
 
 ```bash
-git clone [https://github.com/eduardoleon92/TechTest.git](https://github.com/eduardoleon92/TechTestTekton.git)
+git clone https://github.com/eduardoleon92/TechTestTekton.git
 cd TechTestTekton
 ```
 
