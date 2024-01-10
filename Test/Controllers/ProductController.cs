@@ -10,7 +10,7 @@ namespace Test.API.Controllers
 {
     [Authorize]
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/product")]
     public class ProductController : ControllerBase
     {
         private readonly ProductService _productService;
@@ -20,7 +20,7 @@ namespace Test.API.Controllers
             _productService = productService ?? throw new ArgumentNullException(nameof(productService));
         }
 
-        [HttpGet("GetProductStatus")]
+        [HttpGet("get")]
         [ServiceFilter(typeof(LogResponseTimeFilter))]
         public ActionResult<Dictionary<int, string>> GetProductStatus()
         {
@@ -35,7 +35,7 @@ namespace Test.API.Controllers
             }
         }
 
-        [HttpPost("AddProduct")]
+        [HttpPost("add")]
         [ServiceFilter(typeof(LogResponseTimeFilter))]
         public ActionResult AddProduct(string name, int stock, string description, decimal price)
         {
@@ -54,7 +54,7 @@ namespace Test.API.Controllers
             }
         }
 
-        [HttpGet("GetAllProducts")]
+        [HttpGet("all")]
         [ServiceFilter(typeof(LogResponseTimeFilter))]
         public ActionResult<List<Product>> GetAllProducts()
         {
@@ -69,7 +69,7 @@ namespace Test.API.Controllers
             }
         }
 
-        [HttpGet("GetById/{productId}")]
+        [HttpGet("get/{productId}")]
         [ServiceFilter(typeof(LogResponseTimeFilter))]
         public ActionResult<Product> GetById(int productId)
         {
@@ -89,7 +89,7 @@ namespace Test.API.Controllers
             }
         }
 
-        [HttpPut("UpdateProduct/{productId}")]
+        [HttpPut("update/{productId}")]
         [ServiceFilter(typeof(LogResponseTimeFilter))]
         public ActionResult UpdateProduct(int productId, [FromBody] ProductUpdateModel updateModel)
         {

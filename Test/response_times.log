@@ -122,3 +122,6 @@ Path: /api/Product/AddProduct, Method: POST, Response Time: 6 ms
 Path: /api/Product/AddProduct, Method: POST, Response Time: 6 ms
 Path: /api/Product/GetAllProducts, Method: GET, Response Time: 6188 ms
 Path: /api/Product/GetAllProducts, Method: GET, Response Time: 6188 ms
+Path: /api/Auth/login, Method: POST, Response Time: 122 ms
+Path: /api/Product/GetAllProducts, Method: GET, Response Time: 0 ms
+Path: /api/Product/GetAllProducts, Method: GET, Response Time: 1 ms

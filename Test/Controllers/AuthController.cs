@@ -5,7 +5,7 @@ using Test.Shared;
 
 namespace Test.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/auth")]
     [ApiController]
     public class AuthController : ControllerBase
     {
