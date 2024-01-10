@@ -48,3 +48,4 @@
 /Test.Application/obj/project.assets.json
 *.json
 /Test.Application.UnitTest/bin/Debug/net7.0/CoverletSourceRootsMapping
+*.vsidx
