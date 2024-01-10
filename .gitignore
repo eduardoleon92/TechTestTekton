@@ -65,3 +65,283 @@
 /Test.Application.UnitTest/obj/Test.Application.UnitTest.csproj.nuget.g.props
 /Test.Application.UnitTest/obj/Test.Application.UnitTest.csproj.nuget.g.targets
 /Test.Shared/obj/Debug/net7.0/Test.Shared.csproj.AssemblyReference.cache
+
+# Visual Studio Code
+.vscode/
+
+# Visual Studio
+*.suo
+*.ntvs*
+*.nupkg
+*.pfx
+*.snk
+*.user
+*.userosscache
+*.suo
+*. suo
+*.cache
+*.log
+*.vspscc
+*.vspolicy
+*.vspx
+*.dotCover
+*.userosscache
+*.dotCover
+*.dotSettings.user
+*.sln.docstates
+
+# Rider
+.idea/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.suo
+*. suo
+*.cache
+*.log
+*.vspscc
+*.vspolicy
+*.vspx
+*.dotCover
+*.userosscache
+*.dotCover
+*.dotSettings.user
+
+# ReSharper
+_ReSharper*/
+*.DotSettings
+
+# Rider
+.idea/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.suo
+*. suo
+*.cache
+*.log
+*.vspscc
+*.vspolicy
+*.vspx
+*.dotCover
+*.userosscache
+*.dotCover
+*.dotSettings.user
+
+# Rider
+.idea/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.suo
+*. suo
+*.cache
+*.log
+*.vspscc
+*.vspolicy
+*.vspx
+*.dotCover
+*.userosscache
+*.dotCover
+*.dotSettings.user
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.suo
+*. suo
+*.cache
+*.log
+*.vspscc
+*.vspolicy
+*.vspx
+*.dotCover
+*.userosscache
+*.dotCover
+*.dotSettings.user
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.suo
+*. suo
+*.cache
+*.log
+*.vspscc
+*.vspolicy
+*.vspx
+*.dotCover
+*.userosscache
+*.dotCover
+*.dotSettings.user
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# JetBrains Rider
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.suo
+*. suo
+*.cache
+*.log
+*.vspscc
+*.vspolicy
+*.vspx
+*.dotCover
+*.userosscache
+*.dotCover
+*.dotSettings.user
+
+# Rider
+.idea/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.suo
+*. suo
+*.cache
+*.log
+*.vspscc
+*.vspolicy
+*.vspx
+*.dotCover
+*.userosscache
+*.dotCover
+*.dotSettings.user
+
+# NuGet
+*.nupkg
+*.pupkg
+*/[Bb]in/
+*/[Oo]bj/
+[Ll]og/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.suo
+*. suo
+*.cache
+*.log
+*.vspscc
+*.vspolicy
+*.vspx
+*.dotCover
+*.userosscache
+*.dotCover
+*.dotSettings.user
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# JetBrains Rider
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.suo
+*. suo
+*.cache
+*.log
+*.vspscc
+*.vspolicy
+*.vspx
+*.dotCover
+*.userosscache
+*.dotCover
+*.dotSettings.user
+
+# Rider
+.idea/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.suo
+*. suo
+*.cache
+*.log
+*.vspscc
+*.vspolicy
+*.vspx
+*.dotCover
+*.userosscache
+*.dotCover
+*.dotSettings.user
+
+# NuGet
+*.nupkg
+*.pupkg
+*/[Bb]in/
+*/[Oo]bj/
+[Ll]og/
+*.swp
