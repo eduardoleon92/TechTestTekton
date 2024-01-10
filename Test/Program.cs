@@ -15,6 +15,13 @@ using Microsoft.AspNetCore.Identity;
 using System.Data;
 using Microsoft.Extensions.Logging;
 using Test.API.ActionFilter;
+using Test.Application.CommandHandlers;
+using Test.Application.Commands;
+using Test.Application.Handlers;
+using Test.Application.Queries;
+using Test.Application.QueryHandlers;
+using Test.Core.Entities;
+using static Test.Application.CommandHandlers.GetDiscountCommandHandler;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSwaggerGen(options =>
@@ -65,6 +72,16 @@ builder.Services.AddScoped<ProductService>();
 builder.Services.AddScoped<AuthRepository>();
 builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<ICommandHandler<CreateProductCommand>, CreateProductCommandHandler>();
+builder.Services.AddScoped<ICommandHandler<UpdateProductCommand>, UpdateProductCommandHandler>();
+builder.Services.AddScoped<IQueryHandler<GetAllProductsQuery, List<Product>>, GetAllProductsQueryHandler>();
+builder.Services.AddScoped<IQueryHandler<GetProductByIdQuery, Product>, GetProductByIdQueryHandler>();
+builder.Services.AddScoped<IQueryHandler<GetProductStatusQuery, Dictionary<int, string>>, GetProductStatusQueryHandler>();
+builder.Services.AddScoped<IDiscountCommandHandler, GetDiscountCommandHandler>();
+builder.Services.AddScoped<IQueryHandler<GetProductByIdQuery, Product>, GetProductByIdQueryHandler>();
+
+
+
 builder.Services.AddSingleton(sp => sp.GetRequiredService<ILoggerFactory>().CreateLogger("DefaultLogger"));
 builder.Services.AddScoped<LogResponseTimeFilter>();
 

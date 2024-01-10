@@ -3,8 +3,12 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using Test.API.ActionFilter;
+using Test.Application.Commands;
+using Test.Application.Queries;
 using Test.Application.Services;
 using Test.Core.Entities;
+using Test.Application.CommandHandlers;
+using Test.Application.Handlers;
 
 namespace Test.API.Controllers
 {
@@ -13,20 +17,33 @@ namespace Test.API.Controllers
     [Route("api/product")]
     public class ProductController : ControllerBase
     {
-        private readonly ProductService _productService;
-
-        public ProductController(ProductService productService)
+        private readonly ICommandHandler<CreateProductCommand> _createProductCommandHandler;
+        private readonly ICommandHandler<UpdateProductCommand> _updateProductCommandHandler;
+        private readonly IQueryHandler<GetAllProductsQuery, List<Product>> _getAllProductsQueryHandler;
+        private readonly IQueryHandler<GetProductByIdQuery, Product> _getProductByIdQueryHandler;
+        private readonly IQueryHandler<GetProductStatusQuery, Dictionary<int, string>> _getProductStatusQueryHandler;
+        public ProductController(
+            ICommandHandler<CreateProductCommand> createProductCommandHandler,
+            ICommandHandler<UpdateProductCommand> updateProductCommandHandler,
+            IQueryHandler<GetAllProductsQuery, List<Product>> getAllProductsQueryHandler,
+            IQueryHandler<GetProductByIdQuery, Product> getProductByIdQueryHandler,
+            IQueryHandler<GetProductStatusQuery, Dictionary<int, string>> getProductStatusQueryHandler)
         {
-            _productService = productService ?? throw new ArgumentNullException(nameof(productService));
+            _createProductCommandHandler = createProductCommandHandler ?? throw new ArgumentNullException(nameof(createProductCommandHandler));
+            _updateProductCommandHandler = updateProductCommandHandler ?? throw new ArgumentNullException(nameof(updateProductCommandHandler));
+            _getAllProductsQueryHandler = getAllProductsQueryHandler ?? throw new ArgumentNullException(nameof(getAllProductsQueryHandler));
+            _getProductByIdQueryHandler = getProductByIdQueryHandler ?? throw new ArgumentNullException(nameof(getProductByIdQueryHandler));
+            _getProductStatusQueryHandler = getProductStatusQueryHandler ?? throw new ArgumentNullException(nameof(getProductStatusQueryHandler));
         }
 
-        [HttpGet("get")]
+
+        [HttpGet("status")]
         [ServiceFilter(typeof(LogResponseTimeFilter))]
         public ActionResult<Dictionary<int, string>> GetProductStatus()
         {
             try
             {
-                var productStatus = _productService.GetProductStatus();
+                var productStatus = _getProductStatusQueryHandler.Handle(new GetProductStatusQuery());
                 return Ok(productStatus);
             }
             catch (Exception ex)
@@ -37,11 +54,11 @@ namespace Test.API.Controllers
 
         [HttpPost("add")]
         [ServiceFilter(typeof(LogResponseTimeFilter))]
-        public ActionResult AddProduct(string name, int stock, string description, decimal price)
+        public ActionResult AddProduct([FromBody] CreateProductCommand command)
         {
             try
             {
-                _productService.AddProduct(name, stock, description, price);
+                _createProductCommandHandler.Handle(command);
                 return Ok("Producto agregado exitosamente");
             }
             catch (ArgumentException ex)
@@ -60,7 +77,7 @@ namespace Test.API.Controllers
         {
             try
             {
-                var products = _productService.GetAllProducts();
+                var products = _getAllProductsQueryHandler.Handle(new GetAllProductsQuery());
                 return Ok(products);
             }
             catch (Exception ex)
@@ -75,7 +92,9 @@ namespace Test.API.Controllers
         {
             try
             {
-                var product = _productService.GetById(productId);
+                var query = new GetProductByIdQuery { ProductId = productId };
+                var product = _getProductByIdQueryHandler.Handle(query);
+
                 if (product == null)
                 {
                     return NotFound();
@@ -91,11 +110,12 @@ namespace Test.API.Controllers
 
         [HttpPut("update/{productId}")]
         [ServiceFilter(typeof(LogResponseTimeFilter))]
-        public ActionResult UpdateProduct(int productId, [FromBody] ProductUpdateModel updateModel)
+        public ActionResult UpdateProduct(int productId, [FromBody] UpdateProductCommand command)
         {
             try
             {
-                _productService.UpdateProduct(productId, updateModel.Name, updateModel.Stock, updateModel.Description, updateModel.Price);
+                command.ProductId = productId;
+                _updateProductCommandHandler.Handle(command);
 
                 return Ok("Producto actualizado exitosamente");
             }
@@ -104,6 +124,8 @@ namespace Test.API.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+
+
 
     }
 }

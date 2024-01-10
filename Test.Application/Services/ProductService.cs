@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Test.Application.Commands;
 using Test.Core.Entities;
 using Test.DataAccess.Repositories;
 
@@ -26,9 +27,9 @@ namespace Test.Application.Services
             return _productRepository.GetProductStatus();
         }
 
-        public void AddProduct(string name, int stock, string description, decimal price)
+        public void AddProduct(CreateProductCommand command)
         {
-            _productRepository.AddProduct(name, stock, description, price);
+            _productRepository.AddProduct(command.Name, command.Stock, command.Description, command.Price);
         }
 
         public List<Product> GetAllProducts()
@@ -101,9 +102,9 @@ namespace Test.Application.Services
             return price * (100 - discount) / 100;
         }
 
-        public void UpdateProduct(int productId, string name, int stock, string description, decimal price)
+        public void UpdateProduct(UpdateProductCommand command)
         {
-            _productRepository.UpdateProduct(productId, name, stock, description, price);
+            _productRepository.UpdateProduct(command.ProductId, command.Name, command.Stock, command.Description, command.Price);
         }
 
 
